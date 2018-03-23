@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>{{pageTitle}}</title>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- Fav Icon  -->
+        <link rel='shortcut icon' href='favicon.ico'>
+
+        <!-- CSS  -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--link href="css/style.css" rel="stylesheet"-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <link href="css/role.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <link href="css/global.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        {{#each css}}
+          <link type="text/css" rel="stylesheet" media="screen,projection" href="/css/{{this}}" />
+        {{/each}}
+    </head>
+    <body>
+      <header>
+        <!--  Nav -->
+          <nav role="navigation" class="red lighten-1">
+            <!-- <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Community Logo</a> -->
+            <div class="row">
+              <div class="col m1"></div>
+              <div class="col m2"><img src="images/logo.png" alt="logo" width="65" height="65"><a href="/" class="brand-logo">PinLab</a></div>
+              <img class="responsive-img" src="cool_pic.jpg">
+              <div class="col m2"></div>
+              <div class="col m2"></div>
+              <div class="col m2">
+                <ul class="right">
+                  <li><a href="/productlist">Products</a></li>
+                  <li><a href="#">Blog</a></li>
+                </ul>
+              </div>
+
+              <div class="col m2">
+                <div class="nav-wrapper">
+                    <ul class="right">
+                      <li><a href="search.html"><i class="material-icons">search</i></a></li>
+                      <li><a href="mail.html"><i class="material-icons">mail</i></a></li>
+                      {{#if user}}
+                        <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons">account_box</i></a></li>
+                      {{else}}
+                        <li><a href="/login">Hi An!</a></li>
+                      {{/if}}
+                    </ul>
+                </div>
+                {{#if user}}
+                  <ul id="dropdown1" class="dropdown-content">
+                    <li><a href="#!">Profile</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#!">Help</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#!">Sign out</a></li>
+                  </ul>
+                {{/if}}
+              </div>
+              <div class="col m1"></div>
+            </div>
+
+              <a href="#" id="side-nav-toggle" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+            <!-- </div> -->
+          </nav>
+      </header>
+
+      <!--  Body Population -->
+      <main>
+        <!-- <div class="container"> -->
+          {{{body}}}
+        <!-- </div> -->
+      </main>
+
+
+        <!-- Footer -->
+        <footer class="page-footer red lighten-1" id="footer">
+          <div class="container">
+            <div class="row" style="margin-bottom: 0px;">
+              <div class="col l6 s12">
+                <h5 class="white-text">About</h5>
+                <p>
+                  <font size="2">
+                    Imagine all of the billion-dollar ideas that go un realized every year within universities. We started PinLab so that entrepreneurs with the ideas can get connected to the students with the skills to make them happen.
+                  </font>
+                <p>
+              </div>
+              <div class="col l3 s12">
+                <h5 class="white-text">Learn More</h5>
+                <ul>
+                  <ul>
+                    <li class="grey-text text-lighten-4"><a href="ourstory.html" style="color:white"> Our Story</a></li>
+                    <li class="grey-text text-lighten-4"><a href="theteam.html" style="color:white">The Team</a></li>
+                    <li class="grey-text text-lighten-4"><a href="careers.html" style="color:white">Careers</a></li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="col l3 s12">
+                <h5 class="white-text">Connect</h5>
+                <ul>
+                  <li><a class="white-text text-lighten-3" href="mailto:info@pinlab.com">Email</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--
+          <input type="hidden" name="user" id="user">{{user}}</input>
+           <div class="footer-copyright">
+            <div class="container">
+            Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+            </div>
+          </div> -->
+        </footer>
+
+         <!--  Scripts-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script src="js/init.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>
