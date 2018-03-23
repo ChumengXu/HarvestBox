@@ -10,6 +10,17 @@ var usersRouter = require('./routes/users');
 var Materialize = require('node-materialize');
 //Materialize.inject();
 var hbs=require('hbs');
+var firebase = require('firebase');
+
+var config = {
+  apiKey: process.env.APIKEY,
+  authDomain: process.env.AUTHDOMAIN,
+  databaseURL: process.env.DATABASEURL,
+  projectId: process.env.PROJECTID,
+  storageBucket: process.env.STORAGEBUCKET,
+  messagingSenderId: process.env.MESSAGINGSENDERID
+};
+firebase.initializeApp(config);
 
 
 var app = express();
