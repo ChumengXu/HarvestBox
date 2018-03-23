@@ -11,6 +11,7 @@ $(document).ready(function(){
    //   $('#submit_modal').open();
    // });
 
+
    $('#final_submission').on('click', function(){
      console.log('Submitting form now!');
      // $('#anna_form').submit();
