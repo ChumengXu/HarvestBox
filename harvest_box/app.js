@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
+var inventoryRouter = require('./routes/inventory');
 var usersRouter = require('./routes/users');
 
 var Materialize = require('node-materialize');
@@ -38,6 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/inventory', inventoryRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -53,6 +55,12 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+app.get('/inventory', function(req,res){
+  res.render('inventory', {user: req.cookies.user, layout: true});
+    // res.render('inventory', {pageTitle: 'Project List', user: req.cookies.user, products: products,
+    //     css: ['sidenav.css', 'productList.css']});
 });
 
 module.exports = app;

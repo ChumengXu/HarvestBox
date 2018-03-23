@@ -1,0 +1,41 @@
+#anna_nav {
+  /* float: left;
+  width: 785px;
+  height: 600px;
+  padding-right: 100px; */
+  background-color: #4caf50;
+  /*think this goes too low*/
+}
+
+#footer_anna {
+  background-color: #4caf50;
+}
+
+#anna_test {
+  /* width: 50%; */
+  width: 100%;
+  display: table;
+  margin: 0 auto;
+}
+
+#anna_testp {
+  width: 50%;
+  /* width: 100%;
+  display: table; */
+  margin: 0 auto;
+}
+
+
+#anna_test2 {
+  /* width: 50%; */
+  display: table;
+  margin: 0 auto;
+}
+
+#anna_button {
+  background-color: #F29335;
+}
+
+#anna_add {
+  background-color: #F29335;
+}
