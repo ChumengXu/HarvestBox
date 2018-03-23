@@ -36,6 +36,7 @@
 #anna_import_button{
   display: table; 
   margin: 0 auto;
+  background-color: #F29335;
 }
 
 #anna_file_picker {
@@ -56,6 +57,12 @@
 #anna_refresh {
   background-color: #F29335;
 }
+
+#anna_browse,#anna_recommendation,#add_to_sales {
+  background-color: #F29335;
+}
+
+
 
 /* #anna_refresh {
   width: 50%;
