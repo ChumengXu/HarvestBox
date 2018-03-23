@@ -8,3 +8,4 @@ var Materialize = module.exports = {
     require('./bin/materialize.js');
   }
 }
+
