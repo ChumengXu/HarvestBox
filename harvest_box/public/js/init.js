@@ -12,8 +12,8 @@ $(document).ready(function(){
    // });
 
    $('#final_submission').on('click', function(){
-     console.log('Submitting form now!');
+     alert('Submitting form now!');
      $('#anna_form').submit();
+     
    });
-
- });
+  });
