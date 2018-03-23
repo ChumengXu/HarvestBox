@@ -24,7 +24,7 @@ $(document).ready(function(){
               //window.location.replace("/submit_resolved.php");
           },
           complete: function() {
-              alert ("Form Submitted!");
+              alert ("Purchase Data Submitted!");
               window.location.replace("/analytics");
           }
           // error: function () {
