@@ -9,6 +9,7 @@ var inventoryRouter = require('./routes/inventory');
 var usersRouter = require('./routes/users');
 var analyticsRouter=require('./routes/analytics');
 var salesRouter=require('./routes/analytics_sales');
+var salesconfRouter=require('./routes/salesconf');
 
 
 var Materialize = require('node-materialize');
@@ -45,6 +46,7 @@ app.use('/users', usersRouter);
 app.use('/inventory', inventoryRouter);
 app.use('/analytics',analyticsRouter);
 app.use('/analytics_sales',salesRouter);
+app.use('/salesconf',salesconfRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

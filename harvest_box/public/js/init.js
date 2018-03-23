@@ -53,4 +53,22 @@ $(document).ready(function(){
     
   });
 
+  $('#add_to_sales').on('click', function(){
+    $.ajax({
+      type: "POST",
+      /*url: "process.php", //process to mail
+      data: $('form.contact').serialize(),*/
+      success: function (msg) {
+          //window.location.replace("/submit_resolved.php");
+      },
+      complete: function() {
+          window.location.replace("/salesconf");
+      }
+      // error: function () {
+      //     alert("error");
+      // }
+  });
+    
+  });
+
   });
