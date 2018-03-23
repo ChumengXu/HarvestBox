@@ -11,10 +11,26 @@ $(document).ready(function(){
    //   $('#submit_modal').open();
    // });
 
+
    $('#final_submission').on('click', function(){
-     alert('Submitting form now!');
-     $('#anna_form').submit();
-     
+     console.log('Submitting form now!');
+     // $('#anna_form').submit();
+
+     $.ajax({
+          type: "POST",
+          /*url: "process.php", //process to mail
+          data: $('form.contact').serialize(),*/
+          success: function (msg) {
+              //window.location.replace("/submit_resolved.php");
+          },
+          complete: function() {
+              alert ("Form Submitted!");
+              window.location.replace("/analytics");
+          }
+          // error: function () {
+          //     alert("error");
+          // }
+      });
    });
 
 
