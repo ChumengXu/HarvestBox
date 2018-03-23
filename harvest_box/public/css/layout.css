@@ -32,6 +32,19 @@
   margin: 0 auto;
 }
 
+
+#anna_import_button{
+  display: table; 
+  margin: 0 auto;
+}
+
+#anna_file_picker {
+  width: 50%;
+  /* width: 100%;
+  display: table; */
+  margin: 0 auto;
+}
+
 #anna_button {
   background-color: #F29335;
 }

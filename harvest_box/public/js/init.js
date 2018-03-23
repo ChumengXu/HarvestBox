@@ -16,4 +16,25 @@ $(document).ready(function(){
      $('#anna_form').submit();
      
    });
+
+
+   $('#anna_import_button').on('click', function(){
+    alert('Importing sales history data now!');
+    $.ajax({
+      type: "POST",
+      /*url: "process.php", //process to mail
+      data: $('form.contact').serialize(),*/
+      success: function (msg) {
+          //window.location.replace("/submit_resolved.php");
+      },
+      complete: function() {
+          window.location.replace("/analytics_sales");
+      }
+      // error: function () {
+      //     alert("error");
+      // }
+  });
+    
+  });
+
   });
